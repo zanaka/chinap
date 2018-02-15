@@ -2,9 +2,9 @@
 
 class Menu
 {
-    public $name;
-    public $price;
-    public $image;
+    private $name;
+    private $price;
+    private $image;
 
     public function __construct($name, $price, $image)
     {
@@ -16,6 +16,14 @@ class Menu
     public function hello()
     {
         echo '私は' . $this->name . 'です';
+    }
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getImage() {
+        return $this->image;
     }
 }
 ?>
