@@ -13,7 +13,11 @@
     <h1 class="logo">茶処真壁ちなー</h1>
     <div class="menu-items">
         <?php foreach ($menus as $menu): ?>
-            <h3><?php echo $menu->name ?></h3>
+            <div class="menu-item">
+                <img src="<?php echo $menu->image ?>">
+                <h3 class="menu-item-name"><?php echo $menu->name ?></h3>
+                <p class="price">¥<?php echo $menu->price ?></p>
+            </div>
         <?php endforeach ?>
     </div>
 </div>
