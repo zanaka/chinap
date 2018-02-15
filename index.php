@@ -2,6 +2,10 @@
 // Menuクラスの定義
 class Menu {
     public $name;
+
+    function hello() {
+        echo '私はMenuクラスのインスタンスです';
+    }
 }
 
 // Menuクラスのインスタンスを各変数に代入
@@ -14,5 +18,9 @@ $pasta->name = 'PASTA';
 echo $curry->name;
 echo '<br>';
 echo $pasta->name;
+
+$curry->hello();
+echo '<br>';
+$pasta->hello();
 
 ?>
