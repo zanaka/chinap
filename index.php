@@ -1,10 +1,11 @@
-<!-- BMIを算出するprogram -->
-
 <?php
-$height = 150;
-$weight = 55;
+// Menuクラスの定義
+class Menu {
 
-$bmi = ($weight / ($height * $height)) * 10000;
-echo "BMIは{$bmi}です" ;
+}
+
+// Menuクラスのインスタンスを各変数に代入
+$curry = new Menu();
+$pasta = new Menu();
 
 ?>
