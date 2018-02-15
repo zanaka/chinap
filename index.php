@@ -1,22 +1,4 @@
-<?php
-class Menu {
-    public $name;
-
-    public function __construct($name) {
-        $this->name = $name;
-    }
-
-    public function hello() {
-        echo '私は'.$this->name.'です';
-    }
-}
-
-$soba = new Menu('そば');
-$ysoba = new Menu('やさいそば');
-$ssoba = new Menu('皿そば');
-$nsoba = new Menu('肉もやしそば');
-$menus = array ($soba,$ysoba,$ssoba,$nsoba);
-?>
+<?php require_once('data.php') ?>
 
 <!DOCTYPE html>
 <html>
