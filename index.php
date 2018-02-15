@@ -17,6 +17,7 @@
                 <img src="<?php echo $menu->getName() ?>" class="menu-item-image">
                 <h3 class="menu-item-name"><?php echo $menu->getImage() ?></h3>
                 <p class="price">¥<?php echo $menu->price ?></p>
+                <p>注文数: <?php echo $menu->getOrderCount() ?></p>
             </div>
         <?php endforeach ?>
     </div>
