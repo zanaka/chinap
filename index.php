@@ -11,16 +11,20 @@
 <body>
 <div class="menu-wrapper container">
     <h1 class="logo">茶処真壁ちなー</h1>
-    <div class="menu-items">
-        <?php foreach ($menus as $menu): ?>
-            <div class="menu-item">
-                <img src="<?php echo $menu->getName() ?>" class="menu-item-image">
-                <h3 class="menu-item-name"><?php echo $menu->getImage() ?></h3>
-                <p class="price">¥<?php echo $menu->price ?></p>
-                <p>注文数: <?php echo $menu->getOrderCount() ?></p>
-            </div>
-        <?php endforeach ?>
-    </div>
+    <form action="confirm.php" method="post">
+        <div class="menu-items">
+            <?php foreach ($menus as $menu): ?>
+                <div class="menu-item">
+                    <img src="<?php echo $menu->getImage() ?>" class="menu-item-image">
+                    <h3 class="menu-item-name"><?php echo $menu->getName() ?></h3>
+                    <p class="price">¥<?php echo $menu->getTaxIncludedPrice() ?>（税込）</p>
+                    <input type="text" value="0" name="$menu->getName()">
+                    <span>個</span>
+                </div>
+            <?php endforeach ?>
+        </div>
+        <input type="submit" value="注文する">
+    </form>
 </div>
 </body>
 </html>

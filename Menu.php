@@ -32,7 +32,7 @@ class Menu
     }
 
     public function setOrderCount($orderCount) {
-        return $this->orderCount = $orderCount;
+        $this->orderCount = $orderCount;
     }
 }
 ?>
