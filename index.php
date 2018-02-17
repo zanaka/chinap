@@ -18,7 +18,7 @@
                     <img src="<?php echo $menu->getImage() ?>" class="menu-item-image">
                     <h3 class="menu-item-name"><?php echo $menu->getName() ?></h3>
                     <p class="price">¥<?php echo $menu->getTaxIncludedPrice() ?>（税込）</p>
-                    <input type="text" value="0" name="$menu->getName()">
+                    <input type="text" value="0" name="<?php echo $menu->getName() ?>">
                     <span>個</span>
                 </div>
             <?php endforeach ?>
