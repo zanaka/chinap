@@ -34,5 +34,9 @@ class Menu
     public function setOrderCount($orderCount) {
         $this->orderCount = $orderCount;
     }
+
+    public function getTotalPrice() {
+        return $this->orderCount * $this->getTaxIncludedPrice();
+    }
 }
 ?>
