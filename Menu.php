@@ -1,22 +1,20 @@
 <?php
-
-class Menu
-{
+class Menu {
     private $name;
     private $price;
     private $image;
     private $orderCount = 0;
+    // $countというpublicなクラスプロパティを、初期値を数値の4として定義してください
 
-    public function __construct($name, $price, $image)
-    {
+
+    public function __construct($name, $price, $image) {
         $this->name = $name;
         $this->price = $price;
         $this->image = $image;
     }
 
-    public function hello()
-    {
-        echo '私は' . $this->name . 'です';
+    public function hello() {
+        echo '私は'.$this->name.'です';
     }
 
     public function getName() {
@@ -35,8 +33,13 @@ class Menu
         $this->orderCount = $orderCount;
     }
 
-    public function getTotalPrice() {
-        return $this->orderCount * $this->getTaxIncludedPrice();
+    public function getTaxIncludedPrice() {
+        return floor($this->price * 1.08);
     }
+
+    public function getTotalPrice() {
+        return $this->getTaxIncludedPrice() * $this->orderCount;
+    }
+
 }
 ?>

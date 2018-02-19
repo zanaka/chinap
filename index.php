@@ -1,17 +1,24 @@
-<?php require_once('data.php') ?>
+<?php
+require_once('data.php');
+// menu.phpを読み込んでください
+
+
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
-    <title>茶処真壁ちなー</title>
+    <title>Café Progate</title>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link href='https://fonts.googleapis.com/css?family=Pacifico|Lato' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <div class="menu-wrapper container">
-    <h1 class="logo">茶処真壁ちなー</h1>
-    <form action="confirm.php" method="post">
+    <h1 class="logo">Café Progate</h1>
+    <!-- Menuクラスのクラスプロパティ$countを表示してください -->
+    <h3>メニュー<?php ?>品</h3>
+    <form method="post" action="confirm.php">
         <div class="menu-items">
             <?php foreach ($menus as $menu): ?>
                 <div class="menu-item">
